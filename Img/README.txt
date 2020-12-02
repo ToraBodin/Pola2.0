@@ -1,0 +1,1 @@
+This is where our downloaded images will live until they are deleted. HEIC and HEIF formats will never be deleted. 
