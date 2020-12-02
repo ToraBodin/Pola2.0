@@ -23,12 +23,12 @@ class Settings():
          ab_id = info[0][1]
          min_sec_fade = int(info[1][1])
          max_sec_fade = int(info[2][1])
-         sensitivity = int(info[3][1])#Sensitivity is not currently being used. 
+         sensitivity = int(info[3][1])# Sensitivity is not currently being used. 
          fadein_speed = int(info[4][1])
          fadeout_speed = int(info[5][1])
          
          
-         #print(ab_id, min_sec_fade, max_sec_fade, sensitivity, fadein_speed, fadeout_speed)
+   
          return True, ab_id, min_sec_fade, max_sec_fade, sensitivity, fadein_speed, fadeout_speed
    
      

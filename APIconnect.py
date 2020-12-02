@@ -129,7 +129,9 @@ class APIconnection():
         """
         Download the settings file
         """
-        #Update this so that it is easy to update! 
+        """
+        The setting ID is currently static for Tora's settings doc. Make it so that it goes by name instead! 
+        """
         request = self.service.files().get_media(fileId="17TaO0KkdNBM7vzLdfsolKzNlMggbHmQu")
         fh = io.FileIO(filename, 'wb')
         downloader = MediaIoBaseDownload(fh, request)

@@ -4,7 +4,7 @@ import os
 import urllib.request
 from settings import * 
 from PIL import Image
-#import heicTojpg as h2jpg
+# import heicTojpg as h2jpg
 
 class ImageLib():
     def __init__(self, api):
@@ -19,31 +19,13 @@ class ImageLib():
         self._currentIndex = -1
         self._image = None
         
-    def getImages(self):
-        """Goes into provided directory and returns list with all image paths"""
-        pass
-        
-        #self._images = []
-        
-        #try:
-            #self._images = os.listdir(self._dir)
-            #self._path = self._dir
-            
-        #except:
-            ## Use offline folder
-            #print("No internet connection available")
-            #self._images = os.listdir(self._altDir)
-            #self._path = self._altDir
-            
-        #print("Directory: ", self._path, "\n", "Images found:  ", len(self._images))
-
         
     def getNextImage(self):
         """Updates image to the next one"""
         self._images = self._api.updateImageNames()
         
-        #Get index from local txt file. 
-        #This ensures that the image queue does not reset if the Pola restarts.
+        # Get index from local txt file. 
+        # This ensures that the image queue does not reset if the Pola restarts.
         try: 
             f = open("memoryIndex.txt", 'r')
             self._currentIndex = int((f.read()))
@@ -58,7 +40,7 @@ class ImageLib():
         f.close()
         
         
-        #If there is an internet connection, go online. If not, get the "no wifi error"- image queue
+        # If there is an internet connection, go online. If not, get the "no wifi error"- image queue
         try:
             urllib.request.urlopen('http://torabodin.com/')
             try: 

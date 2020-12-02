@@ -29,11 +29,12 @@ class IMU():
     def checkShake(self):
         """Check for shake"""
         shaken = False
-        #Sensor sensitivity threshold
+        
         """
         These values can definitely be modified. You can also add specific 
         threshholds for the different x/y/z-values if you'd like. 
         """
+        # Sensor sensitivity threshold
         gyroThresh = 90
         accThresh = 15
         try:
